@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css'
 const Banner = () => {
     return (
-        <div className='banner grid  lg:grid-cols-2  grid-cols-2 lg:gap-24 content-center'>
+        <div className='banner grid  lg:grid-cols-2 lg:gap-24 content-center'>
             <div className=''>
                 <p className='text-2xl text-sky-400/100'>Creating a fetures Now!</p>
                 <h1 className='text-5xl text-white'>Best Laptops!</h1>

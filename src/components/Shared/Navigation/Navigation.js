@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Transition } from "@headlessui/react";
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
 
@@ -13,12 +14,12 @@ const Navigation = () => {
                         <div className="flex items-center">
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
-                                    <a
-                                        href="#@"
+                                    <Link
+                                        to="/"
                                         className=" hover:bg-blue-400 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Home
-                                    </a>
+                                    </Link>
 
                                     <a
                                         href="#@"
@@ -34,12 +35,12 @@ const Navigation = () => {
                                         Sections All
                                     </a>
 
-                                    <a
-                                        href="#@"
+                                    <Link
+                                        to="/contactus"
                                         className="text-gray-300 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Contact Us
-                                    </a>
+                                    </Link>
 
                                     <a
                                         href="#@"
@@ -47,6 +48,13 @@ const Navigation = () => {
                                     >
                                         About Us
                                     </a>
+                                    <Link
+                                        to="/account"
+                                        className="text-gray-300 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Account
+                                    </Link>
+
                                 </div>
                             </div>
                         </div>
@@ -109,40 +117,40 @@ const Navigation = () => {
                     {(ref) => (
                         <div className="md:hidden" id="mobile-menu">
                             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                                <a
-                                    href="#@"
+                                <Link
+                                    to="/dashboard"
                                     className="hover:bg-blue-400 text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Dashboard
+                                </Link>
+
+                                <Link
+                                    to="/"
+                                    className="text-gray-300 hover:bg-blue-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                >
+                                    Home
+                                </Link>
+
+                                <a
+                                    href="#@"
+                                    className="text-gray-300 hover:bg-blue-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                >
+                                    Sections All
                                 </a>
 
                                 <a
                                     href="#@"
                                     className="text-gray-300 hover:bg-blue-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Team
+                                    Contact Us
                                 </a>
 
-                                <a
-                                    href="#@"
+                                <Link
+                                    to="/account"
                                     className="text-gray-300 hover:bg-blue-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Projects
-                                </a>
-
-                                <a
-                                    href="#@"
-                                    className="text-gray-300 hover:bg-blue-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    Calendar
-                                </a>
-
-                                <a
-                                    href="#@"
-                                    className="text-gray-300 hover:bg-blue-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                >
-                                    Reports
-                                </a>
+                                    Account
+                                </Link>
                             </div>
                         </div>
                     )}
