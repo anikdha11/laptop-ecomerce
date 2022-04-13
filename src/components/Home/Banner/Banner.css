@@ -2,8 +2,12 @@
     background-image: url("../../../image/Banner-1.webp");
     background-repeat: no-repeat;
     background-size:cover;
-    height: 384px;
+    height:384px;
 }
 .banner-2{
-    
+    background-image: url("../../../image/extrabanner.webp");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+
 }
