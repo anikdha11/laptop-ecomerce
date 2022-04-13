@@ -1,0 +1,20 @@
+.hero-1{
+    background-image: url("../../../image/heroSection-1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    
+}
+.hero-2{
+    background-image: url("../../../image/heroSection-2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.hero-3{
+    background-image: url("../../../image/heroSection-3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
