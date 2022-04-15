@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Transition } from "@headlessui/react";
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Navigation = () => {
-
+    const { user, handleSignOut } = useFirebase()
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -27,14 +28,6 @@ const Navigation = () => {
                                     >
                                         Collections
                                     </a>
-
-                                    <a
-                                        href="#@"
-                                        className="text-gray-300 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Sections All
-                                    </a>
-
                                     <Link
                                         to="/contactus"
                                         className="text-gray-300 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -54,6 +47,15 @@ const Navigation = () => {
                                     >
                                         Account
                                     </Link>
+                                    {
+                                        user?.email && <div className='flex flex-row flex-wrap content-center'>
+                                            <button className="text-gray-300 hover:bg-red-400 hover:text-black hover:font-semibold px-3 py-2 rounded-md text-sm font-medium " onClick={handleSignOut}>Sing out</button>
+                                            <p className="text-gray-300 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md hover:font-semibold text-sm font-medium mr-2">{user?.displayName}</p>
+                                            <div>
+                                                <img className='h-9 w-8 my-auto rounded rounded-lg' src={user?.photoURL} alt="" />
+                                            </div>
+                                        </div>
+                                    }
 
                                 </div>
                             </div>
@@ -151,6 +153,15 @@ const Navigation = () => {
                                 >
                                     Account
                                 </Link>
+                                {
+                                        user?.email && <div className='flex flex-col flex-wrap justify-center content-center'>
+                                            <button className="text-gray-300 hover:bg-red-400 hover:text-black px-3 py-2 rounded-md text-sm font-medium text-base " onClick={handleSignOut}>Sing out</button>
+                                            <p className="text-gray-300 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-base mb-2 ">{user?.displayName}</p>
+                                            <div>
+                                                <img className='h-9 w-8 my-auto mx-auto rounded rounded-lg' src={user?.photoURL} alt="" />
+                                            </div>
+                                        </div>
+                                    }
                             </div>
                         </div>
                     )}

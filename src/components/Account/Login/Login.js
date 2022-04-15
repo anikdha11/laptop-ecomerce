@@ -1,16 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
 
-    const handleFormSubmit = (e) => {
+    const [loginData, setLoginData] = useState({});
+    const { handleGoogleSignIn,loginUser } = useFirebase();
+
+    const location = useLocation();
+    const navigate = useNavigate()
+
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
+    }
+    const handleLoginSubmit = e => {
+        loginUser(loginData.email, loginData.password, location, navigate)
         e.preventDefault();
+    }
 
-        let email = e.target.elements.email?.value;
-        let password = e.target.elements.password?.value;
-
-        console.log(email, password);
-    };
     return (
         <div className='mb-8 mt-5'>
             <h1 className='text-xl text-center'>Account</h1>
@@ -20,7 +31,7 @@ const Login = () => {
                         ALREADY REGISTERED? <Link title='Close' to="/account"><i class="far fa-times-circle"></i></Link>
                     </h1>
 
-                    <form onSubmit={handleFormSubmit}>
+                    <form onSubmit={handleLoginSubmit}>
                         <div>
                             <label htmlFor='email'>Email</label>
                             <input
@@ -28,6 +39,7 @@ const Login = () => {
                                 className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
                                 id='email'
                                 placeholder='Your Email'
+                                onBlur={handleOnChange}
                             />
                         </div>
                         <div>
@@ -37,6 +49,7 @@ const Login = () => {
                                 className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
                                 id='password'
                                 placeholder='Your Password'
+                                onBlur={handleOnChange}
                             />
                         </div>
 
@@ -50,7 +63,7 @@ const Login = () => {
                     </form>
                 </div>
             </div>
-            <button className={`bg-green py-2 px-4 text-sm text-black rounded border border-green focus:outline-none focus:border-green-dark hover:border-gray-400`}>
+            <button type='submit' onClick={handleGoogleSignIn} className={`bg-green py-2 px-4 text-sm text-black rounded border border-green focus:outline-none focus:border-green-dark hover:border-gray-400`}>
                 <i className="fab fa-google"></i>
             </button>
         </div>
