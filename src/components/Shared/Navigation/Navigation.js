@@ -9,7 +9,7 @@ const Navigation = () => {
 
     return (
         <div className=''>
-            <nav className="bg-gray-600">
+            <nav style={{position:'fixed',width:'100%'}} className="bg-gray-600">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">

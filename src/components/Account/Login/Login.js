@@ -5,11 +5,14 @@ import useFirebase from '../../hooks/useFirebase';
 const Login = () => {
 
     const [loginData, setLoginData] = useState({});
-    const { handleGoogleSignIn,loginUser } = useFirebase();
+    const { handleGoogleSignIn, loginUser } = useFirebase();
 
     const location = useLocation();
     const navigate = useNavigate()
-
+    let from = location.state?.from?.pathname || "/";
+    const googleSingIn = () => {
+        handleGoogleSignIn(from, navigate)
+    }
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -63,7 +66,7 @@ const Login = () => {
                     </form>
                 </div>
             </div>
-            <button type='submit' onClick={handleGoogleSignIn} className={`bg-green py-2 px-4 text-sm text-black rounded border border-green focus:outline-none focus:border-green-dark hover:border-gray-400`}>
+            <button type='submit' onClick={googleSingIn} className={`bg-green py-2 px-4 text-sm text-black rounded border border-green focus:outline-none focus:border-green-dark hover:border-gray-400`}>
                 <i className="fab fa-google"></i>
             </button>
         </div>

@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "name": "Apple Ipad Air 2 Mh0w2lla 1...",
+        "img": "https://i.ibb.co/yfKyGgY/product-2.webp",
+        "price":"$200-$300",
+        "rating":"4"
+    },
+    {
+        "id": "2",
+        "name": "Huawei 12 Matebook 128gb Ta...",
+        "img": "https://i.ibb.co/hFcPkQm/product-1.webp",
+        "price":"$220-$270",
+        "rating":"5"
+    },
+    {
+        "id": "3",
+        "name": "Lenovo 14 Flex 4 Series Mul...",
+        "img": "https://i.ibb.co/0ZGdNp9/product-3.webp",
+        "price":"$420-$770",
+        "rating":"3.8"
+    },
+    {
+        "id": "4",
+        "name": "Apple 9.7 Ipad Pro With App...",
+        "img": "https://i.ibb.co/9Wp0vNt/product-4.webp",
+        "price":"$280-$480",
+        "rating":"5"
+    },
+    {
+        "id": "5",
+        "name": "Asus 9.7 Zenpad 3s 10 64gb ...",
+        "img": "https://i.ibb.co/pL46WT7/product-9.webp",
+        "price":"$550-$650",
+        "rating":"4.5"
+    },
+    {
+        "id": "6",
+        "name": "Asus 9.7 Zenpad 3s 10 64gb ...",
+        "img": "https://i.ibb.co/MnxHg4J/product-5.webp",
+        "price":"$320-$470",
+        "rating":"5"
+    },
+    {
+        "id": "7",
+        "name": "Fujitsu 13.3 Lifebook T936 ...",
+        "img": "https://i.ibb.co/xLcj1Fb/product-6.webp",
+        "price":"$280-$560",
+        "rating":"3.5"
+    },
+    {
+        "id": "8",
+        "name": "Hp 13.3 Elitebook X360 1030...",
+        "img": "https://i.ibb.co/gjPFvTg/product-7.webp",
+        "price":"$320-$530",
+        "rating":"4.5"
+    },
+    {
+        "id": "9",
+        "name": "Hp 13.3 Elitebook X360 1030...",
+        "img": "https://i.ibb.co/gjPFvTg/product-7.webp",
+        "price":"$970",
+        "rating":"5"
+    },
+    {
+        "id": "10",
+        "name": "Hp 13.3 Elitebook X360 1030...",
+        "img": "https://i.ibb.co/LNPsQn1/product-8.webp",
+        "price":"$800",
+        "rating":"5"
+    }
+]

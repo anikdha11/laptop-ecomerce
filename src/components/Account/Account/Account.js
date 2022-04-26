@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Account = () => {
     return (
-        <div className='mb-5 mt-5'>
+        <div className='mb-5 pt-24'>
             <h1 className='text-xl text-center mb-5'>Account</h1>
           <div className='flex flex-row flex-wrap justify-center gap-4'>
           <Link to="/login" className='border border-gray-200 w-40 h-28 hover:border-gray-600 cursor-pointer rounded'>
