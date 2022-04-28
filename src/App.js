@@ -7,6 +7,7 @@ import Footer from './components/Shared/Footer/Footer';
 import Account from './components/Account/Account/Account';
 import Login from './components/Account/Login/Login';
 import Registation from './components/Account/Registation/Registation';
+import SingleProducts from './components/Home/Products/SingleProducts/SingleProducts';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
    <Route path='/contactus' element={ <ContactUs/>}/>
    <Route path='/account' element={<Account/>}/>
    <Route path='/login' element={<Login/>}></Route>
+   <Route path='/product/:id' element={<SingleProducts/>}/>
    <Route path='/register' element={<Registation/>}/>
    
  </Routes>

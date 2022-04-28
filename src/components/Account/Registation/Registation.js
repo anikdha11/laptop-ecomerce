@@ -31,7 +31,7 @@ const Registation = () => {
     }
 
     return (
-        <div className='mb-8 mt-5'>
+        <div className='mb-8 pt-24'>
         <h1 className='text-xl text-center mt-5'>Account</h1>
         <div className='flex bg-gray-bg1'>
             <div className='w-full max-w-md m-auto bg-white rounded-lg border-primaryBorder shadow-default py-5 px-16'>
